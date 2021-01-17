@@ -9,6 +9,6 @@ namespace project2.Class
 {
     public static class Global
     {
-        public static List<Person> Peaple;
+        public static List<Person> Peaple = new List<Person>();
     }
 }

@@ -57,6 +57,7 @@ namespace project2
         private void btnPerson_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, 0);
+            OpenNewForm(new Peaple());
             index = 0;
             if (header.BackColor.R<150 && header.BackColor.G < 150 && header.BackColor.B < 150)
                 lblTitle.ForeColor = Color.White;
@@ -103,11 +104,10 @@ namespace project2
         {
 
         }
-        private void OpenNewForm(Form frm , object btn)
+        private void OpenNewForm(Form frm)
         {
             if (frm == null)
                 frm.Close();
-            ActiveButton(btn,index);
             currentForm = frm;
             frm.TopLevel = false;
             frm.FormBorderStyle = FormBorderStyle.None;
@@ -126,23 +126,30 @@ namespace project2
 
         private void button5_Click(object sender, EventArgs e)
         {
-            addFolder.Description = "لطفا فایل خود را انتخاب نمایید";
-            addFolder.ShowDialog();
-            string strFileName = addFolder.SelectedPath;
-              var csv = new List<string[]>();
-            var lines = System.IO.File.ReadAllLines(strFileName);
-            foreach (string line in lines)
+            addPerson.Title = "لطفا فایل خود را انتخاب نمایید";
+            addPerson.Filter = "csv File (*.csv) |*.csv|  All files (*.*) |*.*";
+            addPerson.FilterIndex = 1;
+           
+            if (addPerson.ShowDialog() == DialogResult.OK)
             {
-                var par = line.Split(',');
-                Person item = new Person();
-                item.FirstName = par[0].Replace("\"","");
-                item.LastName = par[1].Replace("\"", "");
-                item.Code = par[2].Replace("\"", "");
-                item.BirthDate = par[3].Replace("\"", "");
-                item.BirthPlace = par[4].Replace("\"", "");
-                item.Job = par[5].Replace("\"", "");
-                Global.Peaple.Add(item);
+                string strFileName = addPerson.FileName;
+                var csv = new List<string[]>();
+                var lines = System.IO.File.ReadAllLines(strFileName);
+                foreach (string line in lines)
+                {
+                    var par = line.Split(',');
+                    Person item = new Person();
+                    item.FirstName = par[0].Replace("\"", "");
+                    item.LastName = par[1].Replace("\"", "");
+                    item.Code = par[2].Replace("\"", "");
+                    item.BirthDate = par[3].Replace("\"", "");
+                    item.BirthPlace = par[4].Replace("\"", "");
+                    item.Job = par[5].Replace("\"", "");
+                    Global.Peaple.Add(item);
+                }
+                OpenNewForm(new Peaple());
             }
+
         }
     }
 }

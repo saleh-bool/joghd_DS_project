@@ -17,18 +17,18 @@ namespace project2
         {
             InitializeComponent();
         }
-        private int distanceY = 75;
-        private int count = 0;
-        private void ListPeaple_Paint(object sender, PaintEventArgs e)
+
+        private void Peaple_Load(object sender, EventArgs e)
         {
-            if(Global.Peaple!=null)
+            int count = 0;
+            if (Global.Peaple != null)
             {
                 foreach (var item in Global.Peaple)
                 {
+                    if (count != 0)
+                        this.dataGridView1.Rows.Add(count.ToString(), item.FirstName, item.LastName, item.Code,
+                            item.BirthDate, item.BirthPlace, item.Job);
                     count++;
-                    ItemPerson person = new ItemPerson();
-                    person.Set_Component(count, item.FirstName, item.LastName,item.Code, item.BirthDate, item.BirthPlace, item.Job);
-                    person.Dock = DockStyle.Top;
                 }
             }
         }
