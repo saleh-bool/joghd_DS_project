@@ -68,6 +68,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AccountBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountBank.Designer.cs">
+      <DependentUpon>AccountBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCar.Designer.cs">
+      <DependentUpon>frmCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSimPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSimPhone.Designer.cs">
+      <DependentUpon>frmSimPhone.cs</DependentUpon>
+    </Compile>
     <Compile Include="Help\Theme.cs" />
     <Compile Include="ItemPerson.cs">
       <SubType>UserControl</SubType>
@@ -75,6 +99,9 @@
     <Compile Include="ItemPerson.Designer.cs">
       <DependentUpon>ItemPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\BankAccount.cs" />
+    <Compile Include="Model\Car.cs" />
+    <Compile Include="Model\Home.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Forms\Peaple.cs">
       <SubType>Form</SubType>
@@ -82,10 +109,23 @@
     <Compile Include="Forms\Peaple.Designer.cs">
       <DependentUpon>Peaple.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\SimPhone.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AccountBank.resx">
+      <DependentUpon>AccountBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCar.resx">
+      <DependentUpon>frmCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSimPhone.resx">
+      <DependentUpon>frmSimPhone.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemPerson.resx">
       <DependentUpon>ItemPerson.cs</DependentUpon>

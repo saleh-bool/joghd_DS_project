@@ -10,5 +10,9 @@ namespace project2.Class
     public static class Global
     {
         public static List<Person> Peaple = new List<Person>();
+        public static List<BankAccount> Accounts = new List<BankAccount>();
+        public static List<Home> Homes = new List<Home>();
+        public static List<Car> cars = new List<Car>();
+        public static List<SimPhone> SimPhones = new List<SimPhone>();
     }
 }

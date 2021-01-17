@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.Panel();
+            this.btnAddSim = new System.Windows.Forms.Button();
+            this.btnAddCars = new System.Windows.Forms.Button();
+            this.btnAddHome = new System.Windows.Forms.Button();
+            this.btnAddAcount = new System.Windows.Forms.Button();
             this.btnAddPerson = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,7 +46,7 @@
             this.panelDesk = new System.Windows.Forms.Panel();
             this.statusPanel = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.addPerson = new System.Windows.Forms.OpenFileDialog();
+            this.addInfo = new System.Windows.Forms.OpenFileDialog();
             this.menu.SuspendLayout();
             this.panelIcon.SuspendLayout();
             this.header.SuspendLayout();
@@ -53,6 +57,10 @@
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.menu.Controls.Add(this.btnAddSim);
+            this.menu.Controls.Add(this.btnAddCars);
+            this.menu.Controls.Add(this.btnAddHome);
+            this.menu.Controls.Add(this.btnAddAcount);
             this.menu.Controls.Add(this.btnAddPerson);
             this.menu.Controls.Add(this.button4);
             this.menu.Controls.Add(this.button3);
@@ -61,10 +69,94 @@
             this.menu.Controls.Add(this.btnPerson);
             this.menu.Controls.Add(this.panelIcon);
             this.menu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.menu.Location = new System.Drawing.Point(787, 0);
+            this.menu.Location = new System.Drawing.Point(1237, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(302, 657);
+            this.menu.Size = new System.Drawing.Size(302, 991);
             this.menu.TabIndex = 0;
+            // 
+            // btnAddSim
+            // 
+            this.btnAddSim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnAddSim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddSim.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddSim.FlatAppearance.BorderSize = 0;
+            this.btnAddSim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddSim.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAddSim.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddSim.Image = global::project2.Properties.Resources.add_folder;
+            this.btnAddSim.Location = new System.Drawing.Point(0, 890);
+            this.btnAddSim.Name = "btnAddSim";
+            this.btnAddSim.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnAddSim.Size = new System.Drawing.Size(302, 110);
+            this.btnAddSim.TabIndex = 10;
+            this.btnAddSim.Text = "اضافه کردن سیم کارت";
+            this.btnAddSim.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAddSim.UseVisualStyleBackColor = false;
+            this.btnAddSim.Visible = false;
+            this.btnAddSim.Click += new System.EventHandler(this.btnAddSim_Click);
+            // 
+            // btnAddCars
+            // 
+            this.btnAddCars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnAddCars.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddCars.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddCars.FlatAppearance.BorderSize = 0;
+            this.btnAddCars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCars.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAddCars.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddCars.Image = global::project2.Properties.Resources.add_folder;
+            this.btnAddCars.Location = new System.Drawing.Point(0, 780);
+            this.btnAddCars.Name = "btnAddCars";
+            this.btnAddCars.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnAddCars.Size = new System.Drawing.Size(302, 110);
+            this.btnAddCars.TabIndex = 9;
+            this.btnAddCars.Text = "اضافه کردن ماشین ها";
+            this.btnAddCars.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAddCars.UseVisualStyleBackColor = false;
+            this.btnAddCars.Visible = false;
+            this.btnAddCars.Click += new System.EventHandler(this.btnAddCars_Click);
+            // 
+            // btnAddHome
+            // 
+            this.btnAddHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnAddHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddHome.FlatAppearance.BorderSize = 0;
+            this.btnAddHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddHome.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAddHome.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddHome.Image = global::project2.Properties.Resources.add_folder;
+            this.btnAddHome.Location = new System.Drawing.Point(0, 670);
+            this.btnAddHome.Name = "btnAddHome";
+            this.btnAddHome.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnAddHome.Size = new System.Drawing.Size(302, 110);
+            this.btnAddHome.TabIndex = 8;
+            this.btnAddHome.Text = "اضافه کردن خانه ها";
+            this.btnAddHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAddHome.UseVisualStyleBackColor = false;
+            this.btnAddHome.Visible = false;
+            this.btnAddHome.Click += new System.EventHandler(this.btnAddHome_Click);
+            // 
+            // btnAddAcount
+            // 
+            this.btnAddAcount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnAddAcount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddAcount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddAcount.FlatAppearance.BorderSize = 0;
+            this.btnAddAcount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddAcount.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAddAcount.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddAcount.Image = global::project2.Properties.Resources.add_folder;
+            this.btnAddAcount.Location = new System.Drawing.Point(0, 560);
+            this.btnAddAcount.Name = "btnAddAcount";
+            this.btnAddAcount.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnAddAcount.Size = new System.Drawing.Size(302, 110);
+            this.btnAddAcount.TabIndex = 7;
+            this.btnAddAcount.Text = "اضافه کردن حساب های بانکی";
+            this.btnAddAcount.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAddAcount.UseVisualStyleBackColor = false;
+            this.btnAddAcount.Visible = false;
+            this.btnAddAcount.Click += new System.EventHandler(this.btnAddAcount_Click);
             // 
             // btnAddPerson
             // 
@@ -225,15 +317,17 @@
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(787, 72);
+            this.header.Size = new System.Drawing.Size(1237, 72);
             this.header.TabIndex = 1;
             // 
             // lblTitle
             // 
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitle.Font = new System.Drawing.Font("B Narm", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Location = new System.Drawing.Point(318, 13);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(153, 48);
             this.lblTitle.TabIndex = 0;
@@ -248,7 +342,7 @@
             this.panelDesk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesk.Location = new System.Drawing.Point(0, 72);
             this.panelDesk.Name = "panelDesk";
-            this.panelDesk.Size = new System.Drawing.Size(787, 585);
+            this.panelDesk.Size = new System.Drawing.Size(1237, 919);
             this.panelDesk.TabIndex = 2;
             // 
             // statusPanel
@@ -256,19 +350,19 @@
             this.statusPanel.BackColor = System.Drawing.Color.SlateGray;
             this.statusPanel.Controls.Add(this.lblStatus);
             this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusPanel.Location = new System.Drawing.Point(0, 537);
+            this.statusPanel.Location = new System.Drawing.Point(0, 871);
             this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(787, 48);
+            this.statusPanel.Size = new System.Drawing.Size(1237, 48);
             this.statusPanel.TabIndex = 0;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblStatus.Font = new System.Drawing.Font("B Vahid", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblStatus.Location = new System.Drawing.Point(756, 0);
+            this.lblStatus.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblStatus.Location = new System.Drawing.Point(1205, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(31, 43);
+            this.lblStatus.Size = new System.Drawing.Size(32, 38);
             this.lblStatus.TabIndex = 0;
             this.lblStatus.Text = "   ";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -277,7 +371,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1089, 657);
+            this.ClientSize = new System.Drawing.Size(1539, 991);
             this.Controls.Add(this.panelDesk);
             this.Controls.Add(this.header);
             this.Controls.Add(this.menu);
@@ -312,7 +406,11 @@
         private System.Windows.Forms.Panel statusPanel;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnAddPerson;
-        private System.Windows.Forms.OpenFileDialog addPerson;
+        private System.Windows.Forms.OpenFileDialog addInfo;
+        private System.Windows.Forms.Button btnAddAcount;
+        private System.Windows.Forms.Button btnAddSim;
+        private System.Windows.Forms.Button btnAddCars;
+        private System.Windows.Forms.Button btnAddHome;
     }
 }
 
