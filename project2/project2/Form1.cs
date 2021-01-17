@@ -58,10 +58,11 @@ namespace project2
         private void btnPerson_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, 0);
+            index = 0;
             Peaple peapleForm = new Peaple();
             OpenNewForm(peapleForm);
             lblStatus.Text = "تعداد افراد یافت شده : " + peapleForm.GetNumberOfRow().ToString();
-            index = 0;
+
             if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
                 lblTitle.ForeColor = Color.White;
             ShowAdder(btnAddPerson);

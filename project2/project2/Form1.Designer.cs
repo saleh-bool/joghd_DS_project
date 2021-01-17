@@ -327,7 +327,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("B Narm", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblTitle.Location = new System.Drawing.Point(318, 13);
+            this.lblTitle.Location = new System.Drawing.Point(666, 13);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(153, 48);
             this.lblTitle.TabIndex = 0;
