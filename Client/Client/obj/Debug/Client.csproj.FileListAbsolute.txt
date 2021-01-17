@@ -8,3 +8,4 @@ I:\project\Client\Client\obj\Debug\Client.csproj.GenerateResource.cache
 I:\project\Client\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 I:\project\Client\Client\obj\Debug\Client.exe
 I:\project\Client\Client\obj\Debug\Client.pdb
+I:\project\Client\Client\obj\Debug\Client.Item.resources
