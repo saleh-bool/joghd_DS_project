@@ -10,7 +10,11 @@ namespace project2.Help
     {
         public static List<string> ColorTheme = new List<string>()
         {
-            "009FB7"
+            "#31BDA2",
+            "#C9AB57",
+            "#C84630",
+            "#CE736C",
+            "#4F1A4F"
         };
     }
 }
