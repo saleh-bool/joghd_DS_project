@@ -57,7 +57,9 @@ namespace project2
         private void btnPerson_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, 0);
-            OpenNewForm(new Peaple());
+            Peaple peapleForm = new Peaple();
+            OpenNewForm(peapleForm);
+            lblStatus.Text = "تعداد افراد یافت شده : "+peapleForm.GetNumberOfRow().ToString();
             index = 0;
             if (header.BackColor.R<150 && header.BackColor.G < 150 && header.BackColor.B < 150)
                 lblTitle.ForeColor = Color.White;
@@ -117,6 +119,7 @@ namespace project2
             frm.BringToFront();
             frm.Show();
             lblTitle.Text = frm.Text;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -132,6 +135,7 @@ namespace project2
            
             if (addPerson.ShowDialog() == DialogResult.OK)
             {
+                lblStatus.Text = "درحال بارگذاری ...";
                 string strFileName = addPerson.FileName;
                 var csv = new List<string[]>();
                 var lines = System.IO.File.ReadAllLines(strFileName);
@@ -147,7 +151,11 @@ namespace project2
                     item.Job = par[5].Replace("\"", "");
                     Global.Peaple.Add(item);
                 }
-                OpenNewForm(new Peaple());
+                lblStatus.Text = "";
+                Peaple peapleForm = new Peaple();
+                OpenNewForm(peapleForm);
+                lblStatus.Text = "تعداد افراد یافت شده : " + peapleForm.GetNumberOfRow().ToString();
+
             }
 
         }

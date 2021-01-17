@@ -35,6 +35,7 @@
             this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthPlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Job = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ListPeaple.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -48,7 +49,7 @@
             this.ListPeaple.Location = new System.Drawing.Point(0, 0);
             this.ListPeaple.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ListPeaple.Name = "ListPeaple";
-            this.ListPeaple.Size = new System.Drawing.Size(815, 664);
+            this.ListPeaple.Size = new System.Drawing.Size(929, 664);
             this.ListPeaple.TabIndex = 1;
             // 
             // dataGridView1
@@ -61,6 +62,7 @@
             this.LastName,
             this.Code,
             this.BirthDate,
+            this.BirthPlace,
             this.Job});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaption;
@@ -70,7 +72,7 @@
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(815, 664);
+            this.dataGridView1.Size = new System.Drawing.Size(929, 664);
             this.dataGridView1.TabIndex = 0;
             // 
             // number
@@ -108,6 +110,13 @@
             this.BirthDate.Name = "BirthDate";
             this.BirthDate.Width = 125;
             // 
+            // BirthPlace
+            // 
+            this.BirthPlace.HeaderText = "محل تولد";
+            this.BirthPlace.MinimumWidth = 6;
+            this.BirthPlace.Name = "BirthPlace";
+            this.BirthPlace.Width = 125;
+            // 
             // Job
             // 
             this.Job.HeaderText = "شغل";
@@ -119,12 +128,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 664);
+            this.ClientSize = new System.Drawing.Size(929, 664);
             this.Controls.Add(this.ListPeaple);
             this.Font = new System.Drawing.Font("B Nazanin", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Peaple";
-            this.Text = "Peaple";
+            this.Text = "اطلاعات افراد";
             this.Load += new System.EventHandler(this.Peaple_Load);
             this.ListPeaple.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -140,6 +149,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn LastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Code;
         private System.Windows.Forms.DataGridViewTextBoxColumn BirthDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BirthPlace;
         private System.Windows.Forms.DataGridViewTextBoxColumn Job;
     }
 }

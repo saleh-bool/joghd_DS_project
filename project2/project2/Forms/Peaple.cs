@@ -17,7 +17,7 @@ namespace project2
         {
             InitializeComponent();
         }
-
+        int numberOfRow = 0;
         private void Peaple_Load(object sender, EventArgs e)
         {
             int count = 0;
@@ -31,6 +31,11 @@ namespace project2
                     count++;
                 }
             }
+            numberOfRow = count-1;
+        }
+        public int GetNumberOfRow()
+        {
+            return numberOfRow;
         }
     }
 }
