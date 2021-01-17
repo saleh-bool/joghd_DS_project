@@ -14,7 +14,8 @@ namespace project2
     public partial class Form1 : Form
     {
         private Button buttonSelected;
-        private int index;
+        private Form currentForm;
+        private int index = 0;
         public Form1()
         {
             InitializeComponent();
@@ -56,7 +57,7 @@ namespace project2
             ActiveButton(sender, 0);
             index = 0;
             if (header.BackColor.R<150 && header.BackColor.G < 150 && header.BackColor.B < 150)
-                lblheader.ForeColor = Color.White;
+                lblTitle.ForeColor = Color.White;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,7 +65,7 @@ namespace project2
             ActiveButton(sender, 1);
             index = 1;
             if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
-                lblheader.ForeColor = Color.White;
+                lblTitle.ForeColor = Color.White;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace project2
             ActiveButton(sender, 2);
             index = 2;
             if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
-                lblheader.ForeColor = Color.White;
+                lblTitle.ForeColor = Color.White;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -80,7 +81,7 @@ namespace project2
             ActiveButton(sender, 3);
             index = 3;
             if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
-                lblheader.ForeColor = Color.White;
+                lblTitle.ForeColor = Color.White;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -88,12 +89,28 @@ namespace project2
             ActiveButton(sender, 4);
             index = 4;
             if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
-                lblheader.ForeColor = Color.White;
+                lblTitle.ForeColor = Color.White;
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+        private void OpenNewForm(Form frm , object btn)
+        {
+            if (frm == null)
+                frm.Close();
+            ActiveButton(btn,index);
+            currentForm = frm;
+            frm.TopLevel = false;
+            frm.FormBorderStyle = FormBorderStyle.None;
+            frm.Dock = DockStyle.Fill;
+            this.panelDesk.Controls.Add(frm);
+            this.panelDesk.Tag = frm;
+            frm.BringToFront();
+            frm.Show();
+            lblTitle.Text = frm.Text;
+        }
+
     }
 }

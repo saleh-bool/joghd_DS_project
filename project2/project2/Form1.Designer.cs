@@ -30,17 +30,20 @@
         {
             this.menu = new System.Windows.Forms.Panel();
             this.panelIcon = new System.Windows.Forms.Panel();
+            this.header = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelDesk = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnPerson = new System.Windows.Forms.Button();
-            this.header = new System.Windows.Forms.Panel();
-            this.lblheader = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.statusPanel = new System.Windows.Forms.Panel();
             this.menu.SuspendLayout();
             this.panelIcon.SuspendLayout();
             this.header.SuspendLayout();
+            this.panelDesk.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
@@ -67,6 +70,48 @@
             this.panelIcon.Name = "panelIcon";
             this.panelIcon.Size = new System.Drawing.Size(302, 100);
             this.panelIcon.TabIndex = 0;
+            // 
+            // header
+            // 
+            this.header.BackColor = System.Drawing.Color.DimGray;
+            this.header.Controls.Add(this.lblTitle);
+            this.header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header.Location = new System.Drawing.Point(0, 0);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(787, 72);
+            this.header.TabIndex = 1;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("B Narm", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblTitle.Location = new System.Drawing.Point(318, 13);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(153, 48);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "صفحه نخست";
+            this.lblTitle.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("SkaterDudes", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(102, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 30);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "OWL";
+            // 
+            // panelDesk
+            // 
+            this.panelDesk.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelDesk.Controls.Add(this.statusPanel);
+            this.panelDesk.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDesk.Location = new System.Drawing.Point(0, 72);
+            this.panelDesk.Name = "panelDesk";
+            this.panelDesk.Size = new System.Drawing.Size(787, 585);
+            this.panelDesk.TabIndex = 2;
             // 
             // button4
             // 
@@ -178,52 +223,31 @@
             this.btnPerson.UseVisualStyleBackColor = false;
             this.btnPerson.Click += new System.EventHandler(this.btnPerson_Click);
             // 
-            // header
+            // statusPanel
             // 
-            this.header.BackColor = System.Drawing.Color.DimGray;
-            this.header.Controls.Add(this.lblheader);
-            this.header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header.Location = new System.Drawing.Point(0, 0);
-            this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(787, 100);
-            this.header.TabIndex = 1;
-            // 
-            // lblheader
-            // 
-            this.lblheader.AutoSize = true;
-            this.lblheader.Font = new System.Drawing.Font("B Narm", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblheader.Location = new System.Drawing.Point(317, 21);
-            this.lblheader.Name = "lblheader";
-            this.lblheader.Size = new System.Drawing.Size(153, 48);
-            this.lblheader.TabIndex = 0;
-            this.lblheader.Text = "صفحه نخست";
-            this.lblheader.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("SkaterDudes", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(102, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "OWL";
+            this.statusPanel.BackColor = System.Drawing.Color.SlateGray;
+            this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.statusPanel.Location = new System.Drawing.Point(0, 542);
+            this.statusPanel.Name = "statusPanel";
+            this.statusPanel.Size = new System.Drawing.Size(787, 43);
+            this.statusPanel.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1089, 657);
+            this.Controls.Add(this.panelDesk);
             this.Controls.Add(this.header);
             this.Controls.Add(this.menu);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Project";
             this.menu.ResumeLayout(false);
             this.panelIcon.ResumeLayout(false);
             this.panelIcon.PerformLayout();
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
+            this.panelDesk.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -238,8 +262,10 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel header;
-        private System.Windows.Forms.Label lblheader;
+        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelDesk;
+        private System.Windows.Forms.Panel statusPanel;
     }
 }
 

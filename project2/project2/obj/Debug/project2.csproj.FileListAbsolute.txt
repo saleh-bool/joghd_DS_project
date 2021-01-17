@@ -18,3 +18,4 @@ I:\project\project2\project2\obj\Debug\project2.csproj.GenerateResource.cache
 I:\project\project2\project2\obj\Debug\project2.csproj.CoreCompileInputs.cache
 I:\project\project2\project2\obj\Debug\project2.exe
 I:\project\project2\project2\obj\Debug\project2.pdb
+I:\project\project2\project2\obj\Debug\project2.ItemPerson.resources
