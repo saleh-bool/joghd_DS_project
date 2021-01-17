@@ -38,23 +38,24 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1057, 58);
+            this.panel1.Size = new System.Drawing.Size(1162, 67);
             this.panel1.TabIndex = 0;
             // 
             // ListPeaple
             // 
-            this.ListPeaple.BackColor = System.Drawing.SystemColors.Highlight;
+            this.ListPeaple.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ListPeaple.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListPeaple.Location = new System.Drawing.Point(0, 58);
+            this.ListPeaple.Location = new System.Drawing.Point(0, 67);
             this.ListPeaple.Name = "ListPeaple";
-            this.ListPeaple.Size = new System.Drawing.Size(1057, 560);
+            this.ListPeaple.Size = new System.Drawing.Size(1162, 550);
             this.ListPeaple.TabIndex = 1;
+            this.ListPeaple.Paint += new System.Windows.Forms.PaintEventHandler(this.ListPeaple_Paint);
             // 
             // Peaple
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 618);
+            this.ClientSize = new System.Drawing.Size(1162, 617);
             this.Controls.Add(this.ListPeaple);
             this.Controls.Add(this.panel1);
             this.Name = "Peaple";

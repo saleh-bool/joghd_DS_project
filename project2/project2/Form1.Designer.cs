@@ -34,21 +34,26 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panelDesk = new System.Windows.Forms.Panel();
+            this.statusPanel = new System.Windows.Forms.Panel();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.btnAddPerson = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnPerson = new System.Windows.Forms.Button();
-            this.statusPanel = new System.Windows.Forms.Panel();
+            this.addFolder = new System.Windows.Forms.FolderBrowserDialog();
             this.menu.SuspendLayout();
             this.panelIcon.SuspendLayout();
             this.header.SuspendLayout();
             this.panelDesk.SuspendLayout();
+            this.statusPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.menu.Controls.Add(this.btnAddPerson);
             this.menu.Controls.Add(this.button4);
             this.menu.Controls.Add(this.button3);
             this.menu.Controls.Add(this.button2);
@@ -112,6 +117,48 @@
             this.panelDesk.Name = "panelDesk";
             this.panelDesk.Size = new System.Drawing.Size(787, 585);
             this.panelDesk.TabIndex = 2;
+            // 
+            // statusPanel
+            // 
+            this.statusPanel.BackColor = System.Drawing.Color.SlateGray;
+            this.statusPanel.Controls.Add(this.lblStatus);
+            this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.statusPanel.Location = new System.Drawing.Point(0, 537);
+            this.statusPanel.Name = "statusPanel";
+            this.statusPanel.Size = new System.Drawing.Size(787, 48);
+            this.statusPanel.TabIndex = 0;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("B Vahid", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblStatus.Location = new System.Drawing.Point(724, 2);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(31, 43);
+            this.lblStatus.TabIndex = 0;
+            this.lblStatus.Text = "   ";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnAddPerson
+            // 
+            this.btnAddPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnAddPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddPerson.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddPerson.FlatAppearance.BorderSize = 0;
+            this.btnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPerson.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAddPerson.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddPerson.Image = global::project2.Properties.Resources.add_folder;
+            this.btnAddPerson.Location = new System.Drawing.Point(0, 450);
+            this.btnAddPerson.Name = "btnAddPerson";
+            this.btnAddPerson.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnAddPerson.Size = new System.Drawing.Size(302, 110);
+            this.btnAddPerson.TabIndex = 6;
+            this.btnAddPerson.Text = "اضافه کردن شخص";
+            this.btnAddPerson.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAddPerson.UseVisualStyleBackColor = false;
+            this.btnAddPerson.Visible = false;
+            this.btnAddPerson.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -223,15 +270,6 @@
             this.btnPerson.UseVisualStyleBackColor = false;
             this.btnPerson.Click += new System.EventHandler(this.btnPerson_Click);
             // 
-            // statusPanel
-            // 
-            this.statusPanel.BackColor = System.Drawing.Color.SlateGray;
-            this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusPanel.Location = new System.Drawing.Point(0, 542);
-            this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(787, 43);
-            this.statusPanel.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -242,12 +280,15 @@
             this.Controls.Add(this.menu);
             this.Name = "Form1";
             this.Text = "Project";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menu.ResumeLayout(false);
             this.panelIcon.ResumeLayout(false);
             this.panelIcon.PerformLayout();
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
             this.panelDesk.ResumeLayout(false);
+            this.statusPanel.ResumeLayout(false);
+            this.statusPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -266,6 +307,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelDesk;
         private System.Windows.Forms.Panel statusPanel;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnAddPerson;
+        private System.Windows.Forms.FolderBrowserDialog addFolder;
     }
 }
 

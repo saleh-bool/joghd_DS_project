@@ -1,4 +1,6 @@
-﻿using project2.Help;
+﻿using project2.Class;
+using project2.Help;
+using project2.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,6 +60,7 @@ namespace project2
             index = 0;
             if (header.BackColor.R<150 && header.BackColor.G < 150 && header.BackColor.B < 150)
                 lblTitle.ForeColor = Color.White;
+            btnAddPerson.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -66,6 +69,7 @@ namespace project2
             index = 1;
             if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
                 lblTitle.ForeColor = Color.White;
+            btnAddPerson.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -74,6 +78,7 @@ namespace project2
             index = 2;
             if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
                 lblTitle.ForeColor = Color.White;
+            btnAddPerson.Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -82,6 +87,7 @@ namespace project2
             index = 3;
             if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
                 lblTitle.ForeColor = Color.White;
+            btnAddPerson.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -90,6 +96,7 @@ namespace project2
             index = 4;
             if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
                 lblTitle.ForeColor = Color.White;
+            btnAddPerson.Visible = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -112,5 +119,30 @@ namespace project2
             lblTitle.Text = frm.Text;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            addFolder.Description = "لطفا فایل خود را انتخاب نمایید";
+            addFolder.ShowDialog();
+            string strFileName = addFolder.SelectedPath;
+              var csv = new List<string[]>();
+            var lines = System.IO.File.ReadAllLines(strFileName);
+            foreach (string line in lines)
+            {
+                var par = line.Split(',');
+                Person item = new Person();
+                item.FirstName = par[0].Replace("\"","");
+                item.LastName = par[1].Replace("\"", "");
+                item.Code = par[2].Replace("\"", "");
+                item.BirthDate = par[3].Replace("\"", "");
+                item.BirthPlace = par[4].Replace("\"", "");
+                item.Job = par[5].Replace("\"", "");
+                Global.Peaple.Add(item);
+            }
+        }
     }
 }
