@@ -14,7 +14,11 @@ namespace project2.Help
             "#C9AB57",
             "#C84630",
             "#CE736C",
-            "#4F1A4F"
+            "#4F1A4F",
+            "#c9ada7",
+            "#ff7d00",
+            "#1768ac",
+            "#b9375e"
         };
     }
 }

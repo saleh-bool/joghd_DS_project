@@ -93,6 +93,16 @@ namespace project2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap call {
+            get {
+                object obj = ResourceManager.GetObject("call", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carin {
             get {
                 object obj = ResourceManager.GetObject("carin", resourceCulture);
@@ -126,6 +136,16 @@ namespace project2.Properties {
         internal static System.Drawing.Bitmap home2 {
             get {
                 object obj = ResourceManager.GetObject("home2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ownership {
+            get {
+                object obj = ResourceManager.GetObject("ownership", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace project2.Properties {
         internal static System.Drawing.Bitmap sim1 {
             get {
                 object obj = ResourceManager.GetObject("sim1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transaction {
+            get {
+                object obj = ResourceManager.GetObject("transaction", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

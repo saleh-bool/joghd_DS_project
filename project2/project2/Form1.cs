@@ -36,7 +36,7 @@ namespace project2
                     buttonSelected.ForeColor = Color.White;
                     buttonSelected.Font = new System.Drawing.Font("B Koodak", 13.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
                     header.BackColor = color;
-                    color = Color.FromArgb(color.R - 20, color.G - 18, color.B - 10);
+                    color = Color.FromArgb(color.R - 20>0? color.R - 20:0, color.G - 18>0? color.G - 18:0, color.B - 10>0? color.B - 10:0);
                     panelIcon.BackColor = color;
                 }
             }
@@ -210,7 +210,7 @@ namespace project2
                 lblStatus.Text = "";
                 frmAccountBank acountForm = new frmAccountBank();
                 OpenNewForm(acountForm);
-                lblStatus.Text = "تعداد افراد یافت شده : " + acountForm.GetNumberOfRow().ToString();
+                lblStatus.Text = "تعداد حساب های بانکی یافت شده : " + acountForm.GetNumberOfRow().ToString();
 
             }
         }
@@ -241,7 +241,7 @@ namespace project2
                 lblStatus.Text = "";
                 frmHome homeForm = new frmHome();
                 OpenNewForm(homeForm);
-                lblStatus.Text = "تعداد افراد یافت شده : " + homeForm.GetNumberOfRow().ToString();
+                lblStatus.Text = "تعداد خانه یافت شده : " + homeForm.GetNumberOfRow().ToString();
             }
         }
 
@@ -270,7 +270,7 @@ namespace project2
                 lblStatus.Text = "";
                 frmCar carForm = new frmCar();
                 OpenNewForm(carForm);
-                lblStatus.Text = "تعداد افراد یافت شده : " + carForm.GetNumberOfRow().ToString();
+                lblStatus.Text = "تعداد ماشین ها یافت شده : " + carForm.GetNumberOfRow().ToString();
             }
         }
 
@@ -298,8 +298,180 @@ namespace project2
                 lblStatus.Text = "";
                 frmSimPhone simForm = new frmSimPhone();
                 OpenNewForm(simForm);
-                lblStatus.Text = "تعداد افراد یافت شده : " + simForm.GetNumberOfRow().ToString();
+                lblStatus.Text = "تعداد سیم کارت های یافت شده : " + simForm.GetNumberOfRow().ToString();
             }
+        }
+
+        private void btnRelationShip_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, 5);
+            index = 5;
+            frmOwnerShip ownerShipForm = new frmOwnerShip();
+            OpenNewForm(ownerShipForm);
+            lblStatus.Text = "تعداد اطلاعات یافت شده : " + ownerShipForm.GetNumberOfRow().ToString();
+
+            if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
+                lblTitle.ForeColor = Color.White;
+            ShowAdder(btnAddOwner);
+        }
+
+        private void btnAddOwner_Click(object sender, EventArgs e)
+        {
+            addInfo.Title = "لطفا فایل خود را انتخاب نمایید";
+            addInfo.Filter = "csv File (*.csv) |*.csv|  All files (*.*) |*.*";
+            addInfo.FilterIndex = 1;
+
+            if (addInfo.ShowDialog() == DialogResult.OK)
+            {
+                lblStatus.Text = "درحال بارگذاری ...";
+                string strFileName = addInfo.FileName;
+                var csv = new List<string[]>();
+                var lines = System.IO.File.ReadAllLines(strFileName);
+                foreach (string line in lines)
+                {
+                    var par = line.Split(',');
+                    OwnerShip item = new OwnerShip();
+                    item.CodeMeli = par[0].Replace("\"", "");
+                    item.Key = par[1].Replace("\"", "");
+                    item.Id = par[2].Replace("\"", "");
+                    item.TimeOfOwnership = par[3].Replace("\"", "");
+                    item.Price = par[4].Replace("\"", "");
+                    Global.OwnerShips.Add(item);
+                }
+                lblStatus.Text = "";
+                frmOwnerShip ownerForm = new frmOwnerShip();
+                OpenNewForm(ownerForm);
+                lblStatus.Text = "تعداد اطلاعات یافت شده : " + ownerForm.GetNumberOfRow().ToString();
+            }
+        }
+
+        private void btnAddTransaction_Click(object sender, EventArgs e)
+        {
+            addInfo.Title = "لطفا فایل خود را انتخاب نمایید";
+            addInfo.Filter = "csv File (*.csv) |*.csv|  All files (*.*) |*.*";
+            addInfo.FilterIndex = 1;
+
+            if (addInfo.ShowDialog() == DialogResult.OK)
+            {
+                lblStatus.Text = "درحال بارگذاری ...";
+                string strFileName = addInfo.FileName;
+                var csv = new List<string[]>();
+                var lines = System.IO.File.ReadAllLines(strFileName);
+                foreach (string line in lines)
+                {
+                    var par = line.Split(',');
+                    Transaction item = new Transaction();
+                    item.From = par[0].Replace("\"", "");
+                    item.To = par[1].Replace("\"", "");
+                    item.Id = par[2].Replace("\"", "");
+                    item.TransactionsTime = par[3].Replace("\"", "");
+                    item.Price = par[4].Replace("\"", "");
+                    Global.Transactions.Add(item);
+                }
+                lblStatus.Text = "";
+                frmTransaction callForm = new frmTransaction();
+                OpenNewForm(callForm);
+                lblStatus.Text = "تعداد اطلاعات تراکنش یافت شده : " + callForm.GetNumberOfRow().ToString();
+            }
+        }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, 6);
+            index = 6;
+            frmTransaction TransactionForm = new frmTransaction();
+            OpenNewForm(TransactionForm);
+            lblStatus.Text = "تعداد اطلاعات تراکنش یافت شده : " + TransactionForm.GetNumberOfRow().ToString();
+
+            if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
+                lblTitle.ForeColor = Color.White;
+            ShowAdder(btnAddTransaction);
+        }
+
+        private void btnAddCall_Click(object sender, EventArgs e)
+        {
+            addInfo.Title = "لطفا فایل خود را انتخاب نمایید";
+            addInfo.Filter = "csv File (*.csv) |*.csv|  All files (*.*) |*.*";
+            addInfo.FilterIndex = 1;
+
+            if (addInfo.ShowDialog() == DialogResult.OK)
+            {
+                lblStatus.Text = "درحال بارگذاری ...";
+                string strFileName = addInfo.FileName;
+                var csv = new List<string[]>();
+                var lines = System.IO.File.ReadAllLines(strFileName);
+                foreach (string line in lines)
+                {
+                    var par = line.Split(',');
+                    Call item = new Call();
+                    item.From = par[0].Replace("\"", "");
+                    item.To = par[1].Replace("\"", "");
+                    item.Id = par[2].Replace("\"", "");
+                    item.CallTime = par[3].Replace("\"", "");
+                    item.duration = par[4].Replace("\"", "");
+                    Global.Calls.Add(item);
+                }
+                lblStatus.Text = "";
+                frmCall callForm = new frmCall();
+                OpenNewForm(callForm);
+                lblStatus.Text = "تعداد اطلاعات تماس یافت شده : " + callForm.GetNumberOfRow().ToString();
+            }
+        }
+
+        private void btnConnection_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, 7);
+            index = 7;
+            frmCall TransactionForm = new frmCall();
+            OpenNewForm(TransactionForm);
+            lblStatus.Text = "تعداد اطلاعات تماس یافت شده : " + TransactionForm.GetNumberOfRow().ToString();
+
+            if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
+                lblTitle.ForeColor = Color.White;
+            ShowAdder(btnAddCall);
+        }
+
+        private void btnAddRelationShip_Click(object sender, EventArgs e)
+        {
+
+            addInfo.Title = "لطفا فایل خود را انتخاب نمایید";
+            addInfo.Filter = "csv File (*.csv) |*.csv|  All files (*.*) |*.*";
+            addInfo.FilterIndex = 1;
+
+            if (addInfo.ShowDialog() == DialogResult.OK)
+            {
+                lblStatus.Text = "درحال بارگذاری ...";
+                string strFileName = addInfo.FileName;
+                var csv = new List<string[]>();
+                var lines = System.IO.File.ReadAllLines(strFileName);
+                foreach (string line in lines)
+                {
+                    var par = line.Split(',');
+                    RelationShip item = new RelationShip();
+                    item.From = par[0].Replace("\"", "");
+                    item.To = par[1].Replace("\"", "");
+                    item.Relation = par[2].Replace("\"", "");
+                    item.StartRelationDate = par[3].Replace("\"", "");
+                    Global.RelationShips.Add(item);
+                }
+                lblStatus.Text = "";
+                frmRelationShip RelationForm = new frmRelationShip();
+                OpenNewForm(RelationForm);
+                lblStatus.Text = "تعداد اطلاعات خویشاوندی یافت شده : " + RelationForm.GetNumberOfRow().ToString();
+            }
+        }
+
+        private void btnRalation_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender, 8);
+            index = 8;
+            frmRelationShip RelationForm = new frmRelationShip();
+            OpenNewForm(RelationForm);
+            lblStatus.Text = "تعداد اطلاعات خویشاوندی یافت شده : " + RelationForm.GetNumberOfRow().ToString();
+
+            if (header.BackColor.R < 150 && header.BackColor.G < 150 && header.BackColor.B < 150)
+                lblTitle.ForeColor = Color.White;
+            ShowAdder(btnAddRelationShip);
         }
     }
 }

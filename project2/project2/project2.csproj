@@ -74,6 +74,12 @@
     <Compile Include="Forms\AccountBank.Designer.cs">
       <DependentUpon>AccountBank.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCall.Designer.cs">
+      <DependentUpon>frmCall.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,11 +92,29 @@
     <Compile Include="Forms\frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmOwnerShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmOwnerShip.Designer.cs">
+      <DependentUpon>frmOwnerShip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRelationShip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRelationShip.Designer.cs">
+      <DependentUpon>frmRelationShip.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmSimPhone.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\frmSimPhone.Designer.cs">
       <DependentUpon>frmSimPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransaction.Designer.cs">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Help\Theme.cs" />
     <Compile Include="ItemPerson.cs">
@@ -100,8 +124,10 @@
       <DependentUpon>ItemPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\BankAccount.cs" />
+    <Compile Include="Model\Call.cs" />
     <Compile Include="Model\Car.cs" />
     <Compile Include="Model\Home.cs" />
+    <Compile Include="Model\OwnerShip.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Forms\Peaple.cs">
       <SubType>Form</SubType>
@@ -109,7 +135,9 @@
     <Compile Include="Forms\Peaple.Designer.cs">
       <DependentUpon>Peaple.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\RelationShip.cs" />
     <Compile Include="Model\SimPhone.cs" />
+    <Compile Include="Model\Transaction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -118,14 +146,26 @@
     <EmbeddedResource Include="Forms\AccountBank.resx">
       <DependentUpon>AccountBank.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCall.resx">
+      <DependentUpon>frmCall.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCar.resx">
       <DependentUpon>frmCar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmOwnerShip.resx">
+      <DependentUpon>frmOwnerShip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRelationShip.resx">
+      <DependentUpon>frmRelationShip.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSimPhone.resx">
       <DependentUpon>frmSimPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransaction.resx">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemPerson.resx">
       <DependentUpon>ItemPerson.cs</DependentUpon>
@@ -203,6 +243,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ownership.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

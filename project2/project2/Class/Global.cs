@@ -14,5 +14,9 @@ namespace project2.Class
         public static List<Home> Homes = new List<Home>();
         public static List<Car> cars = new List<Car>();
         public static List<SimPhone> SimPhones = new List<SimPhone>();
+        public static List<OwnerShip> OwnerShips = new List<OwnerShip>();
+        public static List<RelationShip> RelationShips = new List<RelationShip>();
+        public static List<Call> Calls = new List<Call>();
+        public static List<Transaction> Transactions = new List<Transaction>();
     }
 }

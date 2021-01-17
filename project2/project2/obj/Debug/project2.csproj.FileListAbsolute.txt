@@ -24,3 +24,7 @@ I:\project\project2\project2\obj\Debug\project2.Forms.frmAccountBank.resources
 I:\project\project2\project2\obj\Debug\project2.Forms.frmHome.resources
 I:\project\project2\project2\obj\Debug\project2.Forms.frmCar.resources
 I:\project\project2\project2\obj\Debug\project2.Forms.frmSimPhone.resources
+I:\project\project2\project2\obj\Debug\project2.Forms.frmCall.resources
+I:\project\project2\project2\obj\Debug\project2.Forms.frmOwnerShip.resources
+I:\project\project2\project2\obj\Debug\project2.Forms.frmRelationShip.resources
+I:\project\project2\project2\obj\Debug\project2.Forms.frmTransaction.resources

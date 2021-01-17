@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.menu = new System.Windows.Forms.Panel();
+            this.btnRalation = new System.Windows.Forms.Button();
+            this.btnConnection = new System.Windows.Forms.Button();
+            this.btnTransaction = new System.Windows.Forms.Button();
+            this.btnOwnerShip = new System.Windows.Forms.Button();
             this.btnAddSim = new System.Windows.Forms.Button();
             this.btnAddCars = new System.Windows.Forms.Button();
             this.btnAddHome = new System.Windows.Forms.Button();
@@ -47,6 +51,10 @@
             this.statusPanel = new System.Windows.Forms.Panel();
             this.lblStatus = new System.Windows.Forms.Label();
             this.addInfo = new System.Windows.Forms.OpenFileDialog();
+            this.btnAddOwner = new System.Windows.Forms.Button();
+            this.btnAddTransaction = new System.Windows.Forms.Button();
+            this.btnAddCall = new System.Windows.Forms.Button();
+            this.btnAddRelationShip = new System.Windows.Forms.Button();
             this.menu.SuspendLayout();
             this.panelIcon.SuspendLayout();
             this.header.SuspendLayout();
@@ -57,6 +65,14 @@
             // menu
             // 
             this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.menu.Controls.Add(this.btnAddRelationShip);
+            this.menu.Controls.Add(this.btnAddCall);
+            this.menu.Controls.Add(this.btnAddTransaction);
+            this.menu.Controls.Add(this.btnAddOwner);
+            this.menu.Controls.Add(this.btnRalation);
+            this.menu.Controls.Add(this.btnConnection);
+            this.menu.Controls.Add(this.btnTransaction);
+            this.menu.Controls.Add(this.btnOwnerShip);
             this.menu.Controls.Add(this.btnAddSim);
             this.menu.Controls.Add(this.btnAddCars);
             this.menu.Controls.Add(this.btnAddHome);
@@ -69,22 +85,110 @@
             this.menu.Controls.Add(this.btnPerson);
             this.menu.Controls.Add(this.panelIcon);
             this.menu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.menu.Location = new System.Drawing.Point(1237, 0);
+            this.menu.Location = new System.Drawing.Point(991, 0);
             this.menu.Name = "menu";
-            this.menu.Size = new System.Drawing.Size(302, 991);
+            this.menu.Size = new System.Drawing.Size(302, 1055);
             this.menu.TabIndex = 0;
+            // 
+            // btnRalation
+            // 
+            this.btnRalation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnRalation.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRalation.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRalation.FlatAppearance.BorderSize = 0;
+            this.btnRalation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRalation.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnRalation.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRalation.Image = global::project2.Properties.Resources.ownership;
+            this.btnRalation.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRalation.Location = new System.Drawing.Point(0, 660);
+            this.btnRalation.Name = "btnRalation";
+            this.btnRalation.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnRalation.Size = new System.Drawing.Size(302, 70);
+            this.btnRalation.TabIndex = 14;
+            this.btnRalation.Text = "اطلاعات خویشاوندی";
+            this.btnRalation.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRalation.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRalation.UseVisualStyleBackColor = false;
+            this.btnRalation.Click += new System.EventHandler(this.btnRalation_Click);
+            // 
+            // btnConnection
+            // 
+            this.btnConnection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnConnection.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnConnection.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnConnection.FlatAppearance.BorderSize = 0;
+            this.btnConnection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnection.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnConnection.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnConnection.Image = global::project2.Properties.Resources.call;
+            this.btnConnection.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConnection.Location = new System.Drawing.Point(0, 590);
+            this.btnConnection.Name = "btnConnection";
+            this.btnConnection.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnConnection.Size = new System.Drawing.Size(302, 70);
+            this.btnConnection.TabIndex = 13;
+            this.btnConnection.Text = "اطلاعات تماس";
+            this.btnConnection.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnConnection.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnConnection.UseVisualStyleBackColor = false;
+            this.btnConnection.Click += new System.EventHandler(this.btnConnection_Click);
+            // 
+            // btnTransaction
+            // 
+            this.btnTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTransaction.FlatAppearance.BorderSize = 0;
+            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaction.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnTransaction.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnTransaction.Image = global::project2.Properties.Resources.transaction;
+            this.btnTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTransaction.Location = new System.Drawing.Point(0, 520);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnTransaction.Size = new System.Drawing.Size(302, 70);
+            this.btnTransaction.TabIndex = 12;
+            this.btnTransaction.Text = "اطلاعات تراکنش";
+            this.btnTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTransaction.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnTransaction.UseVisualStyleBackColor = false;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
+            // 
+            // btnOwnerShip
+            // 
+            this.btnOwnerShip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnOwnerShip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnOwnerShip.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOwnerShip.FlatAppearance.BorderSize = 0;
+            this.btnOwnerShip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOwnerShip.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnOwnerShip.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnOwnerShip.Image = global::project2.Properties.Resources.ownership;
+            this.btnOwnerShip.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOwnerShip.Location = new System.Drawing.Point(0, 450);
+            this.btnOwnerShip.Name = "btnOwnerShip";
+            this.btnOwnerShip.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnOwnerShip.Size = new System.Drawing.Size(302, 70);
+            this.btnOwnerShip.TabIndex = 11;
+            this.btnOwnerShip.Text = "اطلاعات مالکیت";
+            this.btnOwnerShip.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOwnerShip.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnOwnerShip.UseVisualStyleBackColor = false;
+            this.btnOwnerShip.Click += new System.EventHandler(this.btnRelationShip_Click);
             // 
             // btnAddSim
             // 
             this.btnAddSim.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
             this.btnAddSim.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddSim.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddSim.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnAddSim.FlatAppearance.BorderSize = 0;
             this.btnAddSim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddSim.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnAddSim.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAddSim.Image = global::project2.Properties.Resources.add_folder;
-            this.btnAddSim.Location = new System.Drawing.Point(0, 890);
+            this.btnAddSim.Location = new System.Drawing.Point(0, 505);
             this.btnAddSim.Name = "btnAddSim";
             this.btnAddSim.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.btnAddSim.Size = new System.Drawing.Size(302, 110);
@@ -99,17 +203,17 @@
             // 
             this.btnAddCars.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
             this.btnAddCars.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddCars.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddCars.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnAddCars.FlatAppearance.BorderSize = 0;
             this.btnAddCars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddCars.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnAddCars.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAddCars.Image = global::project2.Properties.Resources.add_folder;
-            this.btnAddCars.Location = new System.Drawing.Point(0, 780);
+            this.btnAddCars.Location = new System.Drawing.Point(0, 615);
             this.btnAddCars.Name = "btnAddCars";
             this.btnAddCars.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.btnAddCars.Size = new System.Drawing.Size(302, 110);
-            this.btnAddCars.TabIndex = 9;
+            this.btnAddCars.TabIndex = 21;
             this.btnAddCars.Text = "اضافه کردن ماشین ها";
             this.btnAddCars.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnAddCars.UseVisualStyleBackColor = false;
@@ -120,17 +224,17 @@
             // 
             this.btnAddHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
             this.btnAddHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddHome.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnAddHome.FlatAppearance.BorderSize = 0;
             this.btnAddHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddHome.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnAddHome.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAddHome.Image = global::project2.Properties.Resources.add_folder;
-            this.btnAddHome.Location = new System.Drawing.Point(0, 670);
+            this.btnAddHome.Location = new System.Drawing.Point(0, 725);
             this.btnAddHome.Name = "btnAddHome";
             this.btnAddHome.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.btnAddHome.Size = new System.Drawing.Size(302, 110);
-            this.btnAddHome.TabIndex = 8;
+            this.btnAddHome.TabIndex = 22;
             this.btnAddHome.Text = "اضافه کردن خانه ها";
             this.btnAddHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnAddHome.UseVisualStyleBackColor = false;
@@ -141,17 +245,17 @@
             // 
             this.btnAddAcount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
             this.btnAddAcount.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddAcount.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddAcount.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnAddAcount.FlatAppearance.BorderSize = 0;
             this.btnAddAcount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddAcount.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnAddAcount.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAddAcount.Image = global::project2.Properties.Resources.add_folder;
-            this.btnAddAcount.Location = new System.Drawing.Point(0, 560);
+            this.btnAddAcount.Location = new System.Drawing.Point(0, 835);
             this.btnAddAcount.Name = "btnAddAcount";
             this.btnAddAcount.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.btnAddAcount.Size = new System.Drawing.Size(302, 110);
-            this.btnAddAcount.TabIndex = 7;
+            this.btnAddAcount.TabIndex = 20;
             this.btnAddAcount.Text = "اضافه کردن حساب های بانکی";
             this.btnAddAcount.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnAddAcount.UseVisualStyleBackColor = false;
@@ -162,17 +266,17 @@
             // 
             this.btnAddPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
             this.btnAddPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAddPerson.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddPerson.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnAddPerson.FlatAppearance.BorderSize = 0;
             this.btnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPerson.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnAddPerson.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnAddPerson.Image = global::project2.Properties.Resources.add_folder;
-            this.btnAddPerson.Location = new System.Drawing.Point(0, 450);
+            this.btnAddPerson.Location = new System.Drawing.Point(0, 945);
             this.btnAddPerson.Name = "btnAddPerson";
             this.btnAddPerson.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.btnAddPerson.Size = new System.Drawing.Size(302, 110);
-            this.btnAddPerson.TabIndex = 6;
+            this.btnAddPerson.TabIndex = 24;
             this.btnAddPerson.Text = "اضافه کردن شخص";
             this.btnAddPerson.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btnAddPerson.UseVisualStyleBackColor = false;
@@ -317,7 +421,7 @@
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
             this.header.Location = new System.Drawing.Point(0, 0);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(1237, 72);
+            this.header.Size = new System.Drawing.Size(991, 72);
             this.header.TabIndex = 1;
             // 
             // lblTitle
@@ -342,7 +446,7 @@
             this.panelDesk.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesk.Location = new System.Drawing.Point(0, 72);
             this.panelDesk.Name = "panelDesk";
-            this.panelDesk.Size = new System.Drawing.Size(1237, 919);
+            this.panelDesk.Size = new System.Drawing.Size(991, 983);
             this.panelDesk.TabIndex = 2;
             // 
             // statusPanel
@@ -350,9 +454,9 @@
             this.statusPanel.BackColor = System.Drawing.Color.SlateGray;
             this.statusPanel.Controls.Add(this.lblStatus);
             this.statusPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.statusPanel.Location = new System.Drawing.Point(0, 871);
+            this.statusPanel.Location = new System.Drawing.Point(0, 935);
             this.statusPanel.Name = "statusPanel";
-            this.statusPanel.Size = new System.Drawing.Size(1237, 48);
+            this.statusPanel.Size = new System.Drawing.Size(991, 48);
             this.statusPanel.TabIndex = 0;
             // 
             // lblStatus
@@ -360,18 +464,102 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblStatus.Font = new System.Drawing.Font("B Zar", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblStatus.Location = new System.Drawing.Point(1205, 0);
+            this.lblStatus.Location = new System.Drawing.Point(959, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(32, 38);
             this.lblStatus.TabIndex = 0;
             this.lblStatus.Text = "   ";
             this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnAddOwner
+            // 
+            this.btnAddOwner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnAddOwner.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddOwner.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAddOwner.FlatAppearance.BorderSize = 0;
+            this.btnAddOwner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddOwner.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAddOwner.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddOwner.Image = global::project2.Properties.Resources.add_folder;
+            this.btnAddOwner.Location = new System.Drawing.Point(0, 395);
+            this.btnAddOwner.Name = "btnAddOwner";
+            this.btnAddOwner.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnAddOwner.Size = new System.Drawing.Size(302, 110);
+            this.btnAddOwner.TabIndex = 23;
+            this.btnAddOwner.Text = "اضافه کردن اطلاعات مالکیت";
+            this.btnAddOwner.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAddOwner.UseVisualStyleBackColor = false;
+            this.btnAddOwner.Visible = false;
+            this.btnAddOwner.Click += new System.EventHandler(this.btnAddOwner_Click);
+            // 
+            // btnAddTransaction
+            // 
+            this.btnAddTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnAddTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddTransaction.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAddTransaction.FlatAppearance.BorderSize = 0;
+            this.btnAddTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTransaction.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAddTransaction.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddTransaction.Image = global::project2.Properties.Resources.add_folder;
+            this.btnAddTransaction.Location = new System.Drawing.Point(0, 285);
+            this.btnAddTransaction.Name = "btnAddTransaction";
+            this.btnAddTransaction.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnAddTransaction.Size = new System.Drawing.Size(302, 110);
+            this.btnAddTransaction.TabIndex = 25;
+            this.btnAddTransaction.Text = "اضافه کردن اطلاعات تراکنش";
+            this.btnAddTransaction.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAddTransaction.UseVisualStyleBackColor = false;
+            this.btnAddTransaction.Visible = false;
+            this.btnAddTransaction.Click += new System.EventHandler(this.btnAddTransaction_Click);
+            // 
+            // btnAddCall
+            // 
+            this.btnAddCall.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnAddCall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddCall.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAddCall.FlatAppearance.BorderSize = 0;
+            this.btnAddCall.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCall.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAddCall.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddCall.Image = global::project2.Properties.Resources.add_folder;
+            this.btnAddCall.Location = new System.Drawing.Point(0, 175);
+            this.btnAddCall.Name = "btnAddCall";
+            this.btnAddCall.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnAddCall.Size = new System.Drawing.Size(302, 110);
+            this.btnAddCall.TabIndex = 26;
+            this.btnAddCall.Text = "اضافه کردن اطلاعات تماس ها";
+            this.btnAddCall.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAddCall.UseVisualStyleBackColor = false;
+            this.btnAddCall.Visible = false;
+            this.btnAddCall.Click += new System.EventHandler(this.btnAddCall_Click);
+            // 
+            // btnAddRelationShip
+            // 
+            this.btnAddRelationShip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(46)))), ((int)(((byte)(67)))));
+            this.btnAddRelationShip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAddRelationShip.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAddRelationShip.FlatAppearance.BorderSize = 0;
+            this.btnAddRelationShip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddRelationShip.Font = new System.Drawing.Font("B Koodak", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnAddRelationShip.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddRelationShip.Image = global::project2.Properties.Resources.add_folder;
+            this.btnAddRelationShip.Location = new System.Drawing.Point(0, 65);
+            this.btnAddRelationShip.Name = "btnAddRelationShip";
+            this.btnAddRelationShip.Padding = new System.Windows.Forms.Padding(0, 0, 12, 0);
+            this.btnAddRelationShip.Size = new System.Drawing.Size(302, 110);
+            this.btnAddRelationShip.TabIndex = 27;
+            this.btnAddRelationShip.Text = "اضافه کردن اطلاعات خویشاوندی";
+            this.btnAddRelationShip.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnAddRelationShip.UseVisualStyleBackColor = false;
+            this.btnAddRelationShip.Visible = false;
+            this.btnAddRelationShip.Click += new System.EventHandler(this.btnAddRelationShip_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1539, 991);
+            this.ClientSize = new System.Drawing.Size(1293, 1055);
             this.Controls.Add(this.panelDesk);
             this.Controls.Add(this.header);
             this.Controls.Add(this.menu);
@@ -411,6 +599,14 @@
         private System.Windows.Forms.Button btnAddSim;
         private System.Windows.Forms.Button btnAddCars;
         private System.Windows.Forms.Button btnAddHome;
+        private System.Windows.Forms.Button btnOwnerShip;
+        private System.Windows.Forms.Button btnTransaction;
+        private System.Windows.Forms.Button btnConnection;
+        private System.Windows.Forms.Button btnRalation;
+        private System.Windows.Forms.Button btnAddOwner;
+        private System.Windows.Forms.Button btnAddTransaction;
+        private System.Windows.Forms.Button btnAddCall;
+        private System.Windows.Forms.Button btnAddRelationShip;
     }
 }
 
