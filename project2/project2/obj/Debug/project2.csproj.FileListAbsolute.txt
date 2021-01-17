@@ -8,3 +8,13 @@ I:\project2\project2\project2\obj\Debug\project2.csproj.GenerateResource.cache
 I:\project2\project2\project2\obj\Debug\project2.csproj.CoreCompileInputs.cache
 I:\project2\project2\project2\obj\Debug\project2.exe
 I:\project2\project2\project2\obj\Debug\project2.pdb
+I:\project\project2\project2\bin\Debug\project2.exe.config
+I:\project\project2\project2\bin\Debug\project2.exe
+I:\project\project2\project2\bin\Debug\project2.pdb
+I:\project\project2\project2\obj\Debug\project2.csprojAssemblyReference.cache
+I:\project\project2\project2\obj\Debug\project2.Form1.resources
+I:\project\project2\project2\obj\Debug\project2.Properties.Resources.resources
+I:\project\project2\project2\obj\Debug\project2.csproj.GenerateResource.cache
+I:\project\project2\project2\obj\Debug\project2.csproj.CoreCompileInputs.cache
+I:\project\project2\project2\obj\Debug\project2.exe
+I:\project\project2\project2\obj\Debug\project2.pdb
